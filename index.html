@@ -12,6 +12,9 @@
             <article class="window-chat__left-sidebar">
                 <div class="window-chat__header window-chat__header--line window-chat__header--list">
                     <p class="window-chat__title">Список чатов</p>
+                    <button class="btn-closechat">
+                        <img src="img/close-modal.svg" alt="">
+                    </button>
                 </div>
                 <div class="window-chat__items">
                     <div class="window-chat__item window-chat__item--list">
@@ -54,19 +57,35 @@
                         </div>
                     </div>
                 </div>
+                <div class="window-chat__bottom">
+                    <button class="button-sidebar btn-addchat">
+                        Новый чат
+                    </button>
+                </div>
             </article>
             <div class="window-chat__wrapper">
                 <div class="window-chat__main">
                     <div class="window-chat__header window-chat__header--main">
+                        <button class="btn-back">
+                            <img src="img/back.svg" alt="">
+                        </button>
                         <div class="window-chat__info">
                             <img src="img/user.png" class="window-chat__img window-chat__img--grid" alt="Фото пользователя">
-                            <p class="window-chat__subtitle">Общий чат “Соседи”</p>
+                            <div class="window-chat__edit">
+                                <p class="window-chat__subtitle">Общий чат “Соседи”</p>
+                                <button class="btn-edit">
+                                    <img src="img/edit.svg" alt="">
+                                </button>
+                            </div>
                             <p class="window-chat__text">38 пользователей</p>
                         </div>
                         <div class="window-chat__group-btn">
                             <img src="img/add-button.svg" alt="Настроить список пользователей">
                             <img src="img/settings.svg" alt="Добавить пользователя">
                         </div>
+                        <button class="btn-more">
+                            <img src="img/more.svg" alt="">
+                        </button>
                     </div>
                     <div class="window-chat__frame">
                         <!-- Сюда вставлять чат -->
@@ -75,22 +94,133 @@
                 <article class="window-chat__right-sidebar">
                     <div class="window-chat__header window-chat__header--line window-chat__header--group">
                         <p class="window-chat__title">Пользователи группы</p>
-                        <img src="img/icon.svg" alt="Скрыть пользователей группы в чате">
+                        <button class="btn-close">
+                            <img src="img/close-user.svg" alt="Скрыть пользователей группы в чате">
+                        </button>
                     </div>
                     <div class="window-chat__items">
                         <div class="window-chat__item window-chat__item--group">
                             <img src="img/user.png" class="window-chat__img" alt="Фото пользователя">
                             <p class="window-chat__subtitle">Правообладатель ЗУ</p>
-                            <button class="svg-icon">
+                            <button class="button-delete">
                                 <img src="img/garbage.svg" alt="Удалить пользователя">
                             </button>
                         </div>
+                    </div>
+                    <div class="window-chat__bottom">
+                        <button class="button-sidebar btn-adduser">
+                            Добавить пользователя
+                        </button>
                     </div>
                 </article>
             </div>
         </div>
     </section>
 
+
+
+
+    <div class="modal-delete">
+        <div class="modal-delete__wrap modal">
+            <button class="modal__close modal__close--close">
+                <img src="img/close-modal.svg" alt="Закрыть модальное окно">
+            </button>
+            <div class="modal-delete__body">
+                <p class="modal__text">Вы действительно хотите<br> удалить пользователя из группы?</p>
+                <div class="modal__bottom">
+                    <button class="modal__btn modal__btn--red">Да</button>
+                    <button class="modal__btn modal__btn--green">Нет</button>
+                </div>
+            </div>
+        </div>		
+    </div>
+
+    <div class="modal-edit">
+        <div class="modal-edit__wrap modal">
+            <button class="modal__close modal__close--close">
+                <img src="img/close-modal.svg" alt="Закрыть модальное окно">
+            </button>
+            <div class="modal-edit__body">
+                <p class="modal-edit__text">Редактирование</p>
+                <form class="modal-edit__form" action="#" method="post">
+                    <input type="text" name="name" class="modal__input" placeholder="Новый чат">
+                    <button class="modal__btn modal__btn--save">Сохранить</button>
+                </form>
+            </div>
+        </div>		
+    </div>
+
+    <div class="modal-addchat">
+        <div class="modal-addchat__wrap modal">
+            <form class="modal-addchat__body" action="#" method="post">
+                <div class="modal-addchat__top">
+                    <div class="modal-addchat__head">
+                        <p>Создать чат</p>
+                        <button class="modal__close">
+                            <img src="img/close-user.svg" alt="Закрыть модальное окно">
+                        </button>
+                    </div>
+                    <div class="modal-addchat__input-wrap">
+                        <input type="text" name="search" class="modal-addchat__input" placeholder="Поиск">
+                        <button type="submit">
+                            <img src="img/search.svg" alt="Поиск чата">
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-addchat__items">
+                    <div class="modal-addchat__item">
+                        <img src="img/user.png" class="modal-addchat_img" alt="Фото пользователя">
+                        <p>Правообладатель ЗУ</p>
+                        <input class="modal-addchat__check" type="checkbox">
+                    </div>
+                </div>
+                <div class="modal-addchat__bottom">
+                    <button type="submit" class="modal-addchat__button">
+                        Создать чат
+                    </button>
+                </div>
+            </form>
+        </div>		
+    </div>
+
+    <div class="modal-adduser">
+        <div class="modal-adduser__wrap modal">
+            <form class="modal-adduser__body" action="#" method="post">
+                <div class="modal-adduser__top">
+                    <div class="modal-adduser__head">
+                        <p>Добавить пользователя</p>
+                        <button class="modal__close">
+                            <img src="img/close-user.svg" alt="Закрыть модальное окно">
+                        </button>
+                    </div>
+                    <div class="modal-adduser__input-wrap">
+                        <input type="text" name="search" class="modal-adduser__input" placeholder="Поиск">
+                        <button type="submit">
+                            <img src="img/search.svg" alt="Поиск чата">
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-adduser__items">
+                    <div class="modal-adduser__item">
+                        <img src="img/user.png" class="modal-adduser_img" alt="Фото пользователя">
+                        <p>Правообладатель ЗУ</p>
+                        <input class="modal-adduser__check modal-adduser__check--custom" type="checkbox">
+                        <!-- <div>
+                            <input id="cb1" class="modal-adduser__check modal-adduser__check--custom" type="checkbox">
+                            <label for="cb1"></label>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="modal-adduser__bottom">
+                    <button type="submit" class="modal-adduser__button">
+                        Добавить
+                    </button>
+                </div>
+            </form>
+        </div>		
+    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="script.js"></script>
 </body>
 </html>

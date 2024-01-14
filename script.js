@@ -1,6 +1,10 @@
 let btnClose = document.querySelector('.btn-close'),
+    btnOpenUserGroup = document.querySelector('.btn-openuser'),
     rightSidebar = document.querySelector('.window-chat__right-sidebar')
-
+ 
+btnOpenUserGroup.addEventListener('click', () => {
+    rightSidebar.classList.remove('none')
+})
 
 btnClose.addEventListener('click', () => {
     rightSidebar.classList.add('none')
@@ -79,5 +83,4 @@ let btnMore = document.querySelector('.btn-more'),
 btnMore.addEventListener('click', () => {
     settingsList.classList.toggle('open')
 })
-
 

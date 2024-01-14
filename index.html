@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Чат соседей</title>
+</head>
+<body>
+    <section class="container">
+        <div class="window-chat">
+            <article class="window-chat__left-sidebar">
+                <div class="window-chat__header window-chat__header--line window-chat__header--list">
+                    <p class="window-chat__title">Список чатов</p>
+                </div>
+                <div class="window-chat__items">
+                    <div class="window-chat__item window-chat__item--list">
+                        <div class="window-chat__light">
+                            <div></div>
+                        </div>
+                        <img src="img/user.png" class="window-chat__img" alt="Фото пользователя">
+                        <div class="window-chat__msg">
+                            <div class="window-chat__msg-wrap">
+                                <p class="window-chat__subtitle window-chat--ellipsis">Название чата или группы </p>
+                                <p class="window-chat__date">9:08</p>
+                            </div>
+                            <p class="window-chat__text window-chat--ellipsis">Строчки последнего сообщения в коротком виде</p>
+                        </div>
+                    </div>
+                    <div class="window-chat__item window-chat__item--list">
+                        <div class="window-chat__light">
+                            <!-- <div></div> -->
+                        </div>
+                        <img src="img/user.png" class="window-chat__img" alt="Фото пользователя">
+                        <div class="window-chat__msg">
+                            <div class="window-chat__msg-wrap">
+                                <p class="window-chat__subtitle window-chat--ellipsis">Название чата или группы </p>
+                                <p class="window-chat__date">Вчера</p>
+                            </div>
+                            <p class="window-chat__text window-chat--ellipsis">Строчки последнего сообщения в коротком виде</p>
+                        </div>
+                    </div>
+                    <div class="window-chat__item window-chat__item--list">
+                        <div class="window-chat__light">
+                            <div></div>
+                        </div>
+                        <img src="img/user.png" class="window-chat__img" alt="Фото пользователя">
+                        <div class="window-chat__msg">
+                            <div class="window-chat__msg-wrap">
+                                <p class="window-chat__subtitle window-chat--ellipsis">Название чата или группы </p>
+                                <p class="window-chat__date">12.12.23</p>
+                            </div>
+                            <p class="window-chat__text window-chat--ellipsis">Строчки последнего сообщения в коротком виде</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <div class="window-chat__wrapper">
+                <div class="window-chat__main">
+                    <div class="window-chat__header window-chat__header--main">
+                        <div class="window-chat__info">
+                            <img src="img/user.png" class="window-chat__img window-chat__img--grid" alt="Фото пользователя">
+                            <p class="window-chat__subtitle">Общий чат “Соседи”</p>
+                            <p class="window-chat__text">38 пользователей</p>
+                        </div>
+                        <div class="window-chat__group-btn">
+                            <img src="img/add-button.svg" alt="Настроить список пользователей">
+                            <img src="img/settings.svg" alt="Добавить пользователя">
+                        </div>
+                    </div>
+                    <div class="window-chat__frame">
+                        <!-- Сюда вставлять чат -->
+                    </div>
+                </div>
+                <article class="window-chat__right-sidebar">
+                    <div class="window-chat__header window-chat__header--line window-chat__header--group">
+                        <p class="window-chat__title">Пользователи группы</p>
+                        <img src="img/icon.svg" alt="Скрыть пользователей группы в чате">
+                    </div>
+                    <div class="window-chat__items">
+                        <div class="window-chat__item window-chat__item--group">
+                            <img src="img/user.png" class="window-chat__img" alt="Фото пользователя">
+                            <p class="window-chat__subtitle">Правообладатель ЗУ</p>
+                            <button class="svg-icon">
+                                <img src="img/garbage.svg" alt="Удалить пользователя">
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+<script src="script.js"></script>
+</body>
+</html>

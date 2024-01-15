@@ -30,7 +30,7 @@ function modal(btn, modalBody) {
         // $('html').removeClass('overflow-hidden');
         return false;
     });		
-    
+     
     $(document).keydown(function(e) {
         if (e.keyCode === 27) {
             e.stopPropagation();
@@ -56,11 +56,18 @@ let btnOpenChat = document.querySelector('.btn-back'),
     btnCloseChat = document.querySelector('.btn-closechat'),
     leftChat = document.querySelector('.window-chat__left-sidebar')
 
+
 let check = 0;
 btnOpenChat.addEventListener('click', () => {
     if (!check) {
         leftChat.style.display = 'flex'
         btnOpenChat.querySelector('img').src = 'img/close-modal.svg'
+        
+        newHeightSidebar = leftSidebar.offsetHeight - 64 - 85;
+        chatSidebars.forEach((chat) => {
+            chat.style.maxHeight = newHeightSidebar + 'px';
+        })
+
         check = 1
     } else {
         leftChat.style.display = 'none'
@@ -83,4 +90,30 @@ let btnMore = document.querySelector('.btn-more'),
 btnMore.addEventListener('click', () => {
     settingsList.classList.toggle('open')
 })
+
+
+// Получение высоты сайдбаров
+let leftSidebar = document.querySelector(".window-chat__left-sidebar"),
+    chatSidebars = document.querySelectorAll('.window-chat__items');
+
+let newHeightSidebar = 0;
+
+document.addEventListener('DOMContentLoaded', () => {
+    newHeightSidebar = leftSidebar.offsetHeight - 64 - 85;
+    console.log("Height: " + leftSidebar.offsetHeight + "px");
+    chatSidebars.forEach((chat) => {
+        chat.style.maxHeight = newHeightSidebar + 'px';
+    })
+})
+
+window.addEventListener('resize',(e) => {
+    newHeightSidebar = leftSidebar.offsetHeight - 64 - 85;
+    chatSidebars.forEach((chat) => {
+        chat.style.maxHeight = newHeightSidebar + 'px';
+    })
+});
+
+
+
+    
 

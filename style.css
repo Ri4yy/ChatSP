@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Wix+Madefor+Text&display=swap');
+@import url('fonts.css');
 
 body,
 html {
@@ -234,7 +234,7 @@ button {
 }
 
 .modal-addchat__items, .modal-adduser__items {
-    height: 576px;
+    height: 400px;
     overflow-y: scroll;
 }
 .modal-addchat__item, .modal-adduser__item {
@@ -283,10 +283,10 @@ button {
     height: 100%;
 }
 
-/* .window-chat__items {
-    max-height: 600px;
-    overflow-y: scroll;
-} */
+.window-chat__items {
+    max-height: 500px;
+    overflow: auto;
+}
 
 .window-chat__item {
     padding: 20px;
@@ -456,7 +456,7 @@ button {
     flex-direction: column;
 
     width: 100%;
-    min-width: 460px;
+    min-width: 400px;
 }
 
 .window-chat__frame {
@@ -483,6 +483,7 @@ button {
     align-self: flex-end;
     text-align: center;
     color: #fff;
+    font-family: 'Lato', sans-serif;
     font-size: 14px;
     font-weight: 700;
     line-height: normal;
@@ -522,6 +523,14 @@ button {
     scale: 1;
   }
 }
+@media (max-width: 1320px) {
+    .window-chat__left-sidebar {
+        max-width: 360px;
+    }
+    .window-chat__right-sidebar {
+        max-width: 300px;
+    }
+}
 
 @media (max-width: 1240px) {
     .container {
@@ -530,6 +539,7 @@ button {
 
     .window-chat__left-sidebar {
         display: none;
+        /* visibility: hidden; */
     }
 
     .btn-back {
@@ -561,9 +571,45 @@ button {
     .modal-addchat__items, .modal-adduser__items {
         height: 400px;
     }
+
+
+    .window-chat__header--main {
+        position: relative;
+        gap: 10px;
+        padding: 14px 16px;
+    }
+
+    .window-chat__info {
+        column-gap: 10px;
+    }
+
+    .window-chat__group-btn {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        right: 16px;
+        top: 64px;
+        background-color: #fff;
+        box-shadow: 0px 0px 20px 0px rgba(34, 60, 80, 0.2);
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .btn-more {
+        display: block;
+        margin-left: auto;
+    }
+
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
+    .window-chat__main {
+        min-width: 340px;
+    }
+}
+
+/* old 700px */
+@media (max-width: 766px) {
     .window-chat__main {
         min-width: unset;
     }
@@ -603,7 +649,7 @@ button {
 }
 
 @media (max-width: 460px) {
-    .window-chat__header--main {
+    /* .window-chat__header--main {
         position: relative;
         gap: 10px;
         padding: 14px 16px;
@@ -628,7 +674,7 @@ button {
     .btn-more {
         display: block;
         margin-left: auto;
-    }
+    } */
 
     .modal-addchat__wrap, .modal-adduser__wrap {
         width: 100%;
@@ -639,6 +685,8 @@ button {
         width: 100%;
     }
 }
+
+
 
 /* custom checkbox */
 /* input[type="checkbox"]:checked, 

@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css"
+    />
     <link rel="stylesheet" href="style.css">
     <title>Чат соседей</title>
 </head>
@@ -16,7 +20,7 @@
                         <img src="img/close-modal.svg" alt="">
                     </button>
                 </div>
-                <div class="window-chat__items">
+                <div class="window-chat__items" data-simplebar>
                     <div class="window-chat__item window-chat__item--list">
                         <div class="window-chat__light">
                             <div></div>
@@ -39,6 +43,71 @@
                             <div class="window-chat__msg-wrap">
                                 <p class="window-chat__subtitle window-chat--ellipsis">Название чата или группы </p>
                                 <p class="window-chat__date">Вчера</p>
+                            </div>
+                            <p class="window-chat__text window-chat--ellipsis">Строчки последнего сообщения в коротком виде</p>
+                        </div>
+                    </div>
+                    <div class="window-chat__item window-chat__item--list">
+                        <div class="window-chat__light">
+                            <div></div>
+                        </div>
+                        <img src="img/user.png" class="window-chat__img" alt="Фото пользователя">
+                        <div class="window-chat__msg">
+                            <div class="window-chat__msg-wrap">
+                                <p class="window-chat__subtitle window-chat--ellipsis">Название чата или группы </p>
+                                <p class="window-chat__date">12.12.23</p>
+                            </div>
+                            <p class="window-chat__text window-chat--ellipsis">Строчки последнего сообщения в коротком виде</p>
+                        </div>
+                    </div>
+                    <div class="window-chat__item window-chat__item--list">
+                        <div class="window-chat__light">
+                            <div></div>
+                        </div>
+                        <img src="img/user.png" class="window-chat__img" alt="Фото пользователя">
+                        <div class="window-chat__msg">
+                            <div class="window-chat__msg-wrap">
+                                <p class="window-chat__subtitle window-chat--ellipsis">Название чата или группы </p>
+                                <p class="window-chat__date">12.12.23</p>
+                            </div>
+                            <p class="window-chat__text window-chat--ellipsis">Строчки последнего сообщения в коротком виде</p>
+                        </div>
+                    </div>
+                    <div class="window-chat__item window-chat__item--list">
+                        <div class="window-chat__light">
+                            <div></div>
+                        </div>
+                        <img src="img/user.png" class="window-chat__img" alt="Фото пользователя">
+                        <div class="window-chat__msg">
+                            <div class="window-chat__msg-wrap">
+                                <p class="window-chat__subtitle window-chat--ellipsis">Название чата или группы </p>
+                                <p class="window-chat__date">12.12.23</p>
+                            </div>
+                            <p class="window-chat__text window-chat--ellipsis">Строчки последнего сообщения в коротком виде</p>
+                        </div>
+                    </div>
+                    <div class="window-chat__item window-chat__item--list">
+                        <div class="window-chat__light">
+                            <div></div>
+                        </div>
+                        <img src="img/user.png" class="window-chat__img" alt="Фото пользователя">
+                        <div class="window-chat__msg">
+                            <div class="window-chat__msg-wrap">
+                                <p class="window-chat__subtitle window-chat--ellipsis">Название чата или группы </p>
+                                <p class="window-chat__date">12.12.23</p>
+                            </div>
+                            <p class="window-chat__text window-chat--ellipsis">Строчки последнего сообщения в коротком виде</p>
+                        </div>
+                    </div>
+                    <div class="window-chat__item window-chat__item--list">
+                        <div class="window-chat__light">
+                            <div></div>
+                        </div>
+                        <img src="img/user.png" class="window-chat__img" alt="Фото пользователя">
+                        <div class="window-chat__msg">
+                            <div class="window-chat__msg-wrap">
+                                <p class="window-chat__subtitle window-chat--ellipsis">Название чата или группы </p>
+                                <p class="window-chat__date">12.12.23</p>
                             </div>
                             <p class="window-chat__text window-chat--ellipsis">Строчки последнего сообщения в коротком виде</p>
                         </div>
@@ -101,7 +170,70 @@
                             <img src="img/close-user.svg" alt="Скрыть пользователей группы в чате">
                         </button>
                     </div>
-                    <div class="window-chat__items">
+                    <div class="window-chat__items" data-simplebar>
+                        <div class="window-chat__item window-chat__item--group">
+                            <img src="img/user.png" class="window-chat__img" alt="Фото пользователя">
+                            <p class="window-chat__subtitle">Правообладатель ЗУ</p>
+                            <button class="button-delete">
+                                <img src="img/garbage.svg" alt="Удалить пользователя">
+                            </button>
+                        </div>
+                        <div class="window-chat__item window-chat__item--group">
+                            <img src="img/user.png" class="window-chat__img" alt="Фото пользователя">
+                            <p class="window-chat__subtitle">Правообладатель ЗУ</p>
+                            <button class="button-delete">
+                                <img src="img/garbage.svg" alt="Удалить пользователя">
+                            </button>
+                        </div>
+                        <div class="window-chat__item window-chat__item--group">
+                            <img src="img/user.png" class="window-chat__img" alt="Фото пользователя">
+                            <p class="window-chat__subtitle">Правообладатель ЗУ</p>
+                            <button class="button-delete">
+                                <img src="img/garbage.svg" alt="Удалить пользователя">
+                            </button>
+                        </div>
+                        <div class="window-chat__item window-chat__item--group">
+                            <img src="img/user.png" class="window-chat__img" alt="Фото пользователя">
+                            <p class="window-chat__subtitle">Правообладатель ЗУ</p>
+                            <button class="button-delete">
+                                <img src="img/garbage.svg" alt="Удалить пользователя">
+                            </button>
+                        </div>
+                        <div class="window-chat__item window-chat__item--group">
+                            <img src="img/user.png" class="window-chat__img" alt="Фото пользователя">
+                            <p class="window-chat__subtitle">Правообладатель ЗУ</p>
+                            <button class="button-delete">
+                                <img src="img/garbage.svg" alt="Удалить пользователя">
+                            </button>
+                        </div>
+                        <div class="window-chat__item window-chat__item--group">
+                            <img src="img/user.png" class="window-chat__img" alt="Фото пользователя">
+                            <p class="window-chat__subtitle">Правообладатель ЗУ</p>
+                            <button class="button-delete">
+                                <img src="img/garbage.svg" alt="Удалить пользователя">
+                            </button>
+                        </div>
+                        <div class="window-chat__item window-chat__item--group">
+                            <img src="img/user.png" class="window-chat__img" alt="Фото пользователя">
+                            <p class="window-chat__subtitle">Правообладатель ЗУ</p>
+                            <button class="button-delete">
+                                <img src="img/garbage.svg" alt="Удалить пользователя">
+                            </button>
+                        </div>
+                        <div class="window-chat__item window-chat__item--group">
+                            <img src="img/user.png" class="window-chat__img" alt="Фото пользователя">
+                            <p class="window-chat__subtitle">Правообладатель ЗУ</p>
+                            <button class="button-delete">
+                                <img src="img/garbage.svg" alt="Удалить пользователя">
+                            </button>
+                        </div>
+                        <div class="window-chat__item window-chat__item--group">
+                            <img src="img/user.png" class="window-chat__img" alt="Фото пользователя">
+                            <p class="window-chat__subtitle">Правообладатель ЗУ</p>
+                            <button class="button-delete">
+                                <img src="img/garbage.svg" alt="Удалить пользователя">
+                            </button>
+                        </div>
                         <div class="window-chat__item window-chat__item--group">
                             <img src="img/user.png" class="window-chat__img" alt="Фото пользователя">
                             <p class="window-chat__subtitle">Правообладатель ЗУ</p>
@@ -170,7 +302,47 @@
                         </button>
                     </div>
                 </div>
-                <div class="modal-addchat__items">
+                <div class="modal-addchat__items modal__scroll" data-simplebar>
+                    <div class="modal-addchat__item">
+                        <img src="img/user.png" class="modal-addchat_img" alt="Фото пользователя">
+                        <p>Правообладатель ЗУ</p>
+                        <input class="modal-addchat__check" type="checkbox">
+                    </div>
+                    <div class="modal-addchat__item">
+                        <img src="img/user.png" class="modal-addchat_img" alt="Фото пользователя">
+                        <p>Правообладатель ЗУ</p>
+                        <input class="modal-addchat__check" type="checkbox">
+                    </div>
+                    <div class="modal-addchat__item">
+                        <img src="img/user.png" class="modal-addchat_img" alt="Фото пользователя">
+                        <p>Правообладатель ЗУ</p>
+                        <input class="modal-addchat__check" type="checkbox">
+                    </div>
+                    <div class="modal-addchat__item">
+                        <img src="img/user.png" class="modal-addchat_img" alt="Фото пользователя">
+                        <p>Правообладатель ЗУ</p>
+                        <input class="modal-addchat__check" type="checkbox">
+                    </div>
+                    <div class="modal-addchat__item">
+                        <img src="img/user.png" class="modal-addchat_img" alt="Фото пользователя">
+                        <p>Правообладатель ЗУ</p>
+                        <input class="modal-addchat__check" type="checkbox">
+                    </div>
+                    <div class="modal-addchat__item">
+                        <img src="img/user.png" class="modal-addchat_img" alt="Фото пользователя">
+                        <p>Правообладатель ЗУ</p>
+                        <input class="modal-addchat__check" type="checkbox">
+                    </div>
+                    <div class="modal-addchat__item">
+                        <img src="img/user.png" class="modal-addchat_img" alt="Фото пользователя">
+                        <p>Правообладатель ЗУ</p>
+                        <input class="modal-addchat__check" type="checkbox">
+                    </div>
+                    <div class="modal-addchat__item">
+                        <img src="img/user.png" class="modal-addchat_img" alt="Фото пользователя">
+                        <p>Правообладатель ЗУ</p>
+                        <input class="modal-addchat__check" type="checkbox">
+                    </div>
                     <div class="modal-addchat__item">
                         <img src="img/user.png" class="modal-addchat_img" alt="Фото пользователя">
                         <p>Правообладатель ЗУ</p>
@@ -203,7 +375,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="modal-adduser__items">
+                <div class="modal-adduser__items modal__scroll" data-simplebar>
                     <div class="modal-adduser__item">
                         <img src="img/user.png" class="modal-adduser_img" alt="Фото пользователя">
                         <p>Правообладатель ЗУ</p>
@@ -224,6 +396,7 @@
     </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

@@ -96,11 +96,10 @@ btnMore.addEventListener('click', () => {
 let leftSidebar = document.querySelector(".window-chat__left-sidebar"),
     chatSidebars = document.querySelectorAll('.window-chat__items');
 
-let newHeightSidebar = 0;
+let newHeightSidebar = null;
 
 document.addEventListener('DOMContentLoaded', () => {
     newHeightSidebar = leftSidebar.offsetHeight - 64 - 85;
-    console.log("Height: " + leftSidebar.offsetHeight + "px");
     chatSidebars.forEach((chat) => {
         chat.style.maxHeight = newHeightSidebar + 'px';
     })

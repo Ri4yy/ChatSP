@@ -94,7 +94,9 @@ btnMore.addEventListener('click', () => {
 
 // Получение высоты сайдбаров
 let leftSidebar = document.querySelector(".window-chat__left-sidebar"),
-    chatSidebars = document.querySelectorAll('.window-chat__items');
+    chatSidebars = document.querySelectorAll('.window-chat__items'),
+    listChat = document.querySelectorAll('.window-chat__item--list')
+
 
 let newHeightSidebar = null;
 
@@ -103,6 +105,16 @@ window.addEventListener('DOMContentLoaded', () => {
     chatSidebars.forEach((chat) => {
         chat.style.maxHeight = newHeightSidebar + 'px';
     })
+
+    if(window.innerWidth <= 1240) {
+        listChat.forEach(chat => {
+            chat.addEventListener('click', () => {
+                leftChat.style.display = 'none'
+                btnOpenChat.querySelector('img').src = 'img/back.svg'
+                check = 0
+            })
+        });
+    }
 })
 
 window.addEventListener('resize',(e) => {
@@ -113,6 +125,4 @@ window.addEventListener('resize',(e) => {
 });
 
 
-
-    
 

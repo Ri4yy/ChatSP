@@ -690,41 +690,43 @@ button {
 
 
 /* custom checkbox */
-/* input[type="checkbox"]:checked, 
-input[type="checkbox"]:not(:checked)
+.modal-adduser__check--custom:checked, 
+.modal-adduser__check--custom:not(:checked)
 {
     position: absolute;
     left: -9999px;
 }
 
-input[type="checkbox"]:checked + label, 
-input[type="checkbox"]:not(:checked) + label {
+.modal-adduser__check--custom:checked + label, 
+.modal-adduser__check--custom:not(:checked) + label {
     display: inline-block;
     position: relative;
-    padding-left: 28px;
+    /* padding-left: 28px; */
     line-height: 20px;
     cursor: pointer;
 }
 
-input[type="checkbox"]:checked + label:before, 
-input[type="checkbox"]:not(:checked) + label:before {
+.modal-adduser__check--custom:checked + label:before, 
+.modal-adduser__check--custom:not(:checked) + label:before {
     content: "";
     position: absolute;
     left: 0px;
     top: 0px;
-    width: 18px;
-    height: 18px;
-    border: 1px solid #dddddd;
-    background-color: #ffffff;
+    width: 20px;
+    height: 20px;
+    background-color: #B4DCB0;
+}
+.modal-adduser__check--custom:checked + label:before {
+    background-color: #52B147;
 }
 
-input[type="checkbox"]:checked + label:before, 
-input[type="checkbox"]:not(:checked) + label:before {
-    border-radius: 2px;
+.modal-adduser__check--custom:checked + label:before, 
+.modal-adduser__check--custom:not(:checked) + label:before {
+    border-radius: 5px;
 }
 
-input[type="checkbox"]:checked + label:after, 
-input[type="checkbox"]:not(:checked) + label:after {
+.modal-adduser__check--custom:checked + label:after, 
+.modal-adduser__check--custom:not(:checked) + label:after {
     content: "";
     position: absolute;
     -webkit-transition: all 0.2s ease;
@@ -733,15 +735,15 @@ input[type="checkbox"]:not(:checked) + label:after {
     transition: all 0.2s ease;
 }
 
-input[type="checkbox"]:checked + label:after, 
-input[type="checkbox"]:not(:checked) + label:after {
-    left: 3px;
-    top: 4px;
+.modal-adduser__check--custom:checked + label:after, 
+.modal-adduser__check--custom:not(:checked) + label:after {
+    left: 4px;
+    top: 5px;
     width: 10px;
     height: 5px;
     border-radius: 1px;
-    border-left: 4px solid #e145a3;
-    border-bottom: 4px solid #e145a3;
+    border-left: 3px solid #fff;
+    border-bottom: 3px solid #fff;
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
@@ -749,10 +751,10 @@ input[type="checkbox"]:not(:checked) + label:after {
     transform: rotate(-45deg);
 }
 
-input[type="checkbox"]:not(:checked) + label:after {
+.modal-adduser__check--custom:not(:checked) + label:after {
     opacity: 0;
 }
 
-input[type="checkbox"]:checked + label:after {
+.modal-adduser__check--custom:checked + label:after {
     opacity: 1;
-} */
+}

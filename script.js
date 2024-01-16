@@ -2,32 +2,24 @@ let btnClose = document.querySelector('.btn-close'),
     btnOpenUserGroup = document.querySelector('.btn-openuser'),
     rightSidebar = document.querySelector('.window-chat__right-sidebar')
  
+// Открытие левого сайдбара с пользователями
 btnOpenUserGroup.addEventListener('click', () => {
     rightSidebar.classList.remove('none')
 })
-
+// Закрытие левого сайдбара с пользователями
 btnClose.addEventListener('click', () => {
     rightSidebar.classList.add('none')
 })
-
-// let btnDelete = document.querySelector('.button-delete'),
-//     btnEdit = document.querySelector('.btn-edit')
-    
-
-// let popupFade = document.querySelector('.popup-fade'),
-//     modalEdit = document.querySelector('.modal-edit')
 
 // Модальное окно
 function modal(btn, modalBody) {
     $(btn).click(function() {
         $(modalBody).show();
-        // $('html').addClass('overflow-hidden');
         return false;
     });	
     
     $('.modal__close').click(function() {
         $(this).parents(modalBody).hide();
-        // $('html').removeClass('overflow-hidden');
         return false;
     });		
      
@@ -35,38 +27,40 @@ function modal(btn, modalBody) {
         if (e.keyCode === 27) {
             e.stopPropagation();
             $(modalBody).hide();
-            // $('html').removeClass('overflow-hidden');
         }
     });
     
     $(modalBody).click(function(e) {
         if ($(e.target).closest('.modal').length == 0) {
             $(this).hide();					
-            // $('html').removeClass('overflow-hidden');
         }
     });
 }
-
+// Вызов модалки
 modal('.button-delete', '.modal-delete');
 modal('.btn-edit', '.modal-edit');
 modal('.btn-addchat', '.modal-addchat');
 modal('.btn-adduser', '.modal-adduser');
 
+// Получениы высоты блока с чатами
+function getHeightSidebar() {
+    newHeightSidebar = leftSidebar.offsetHeight - 64 - 85;
+    chatSidebars.forEach((chat) => {
+        chat.style.maxHeight = newHeightSidebar + 'px';
+    })
+}
+
+// Открытие/Закрытие левого сайдбара с группами
 let btnOpenChat = document.querySelector('.btn-back'),
     btnCloseChat = document.querySelector('.btn-closechat'),
     leftChat = document.querySelector('.window-chat__left-sidebar')
-
 
 let check = 0;
 btnOpenChat.addEventListener('click', () => {
     if (!check) {
         leftChat.style.display = 'flex'
         btnOpenChat.querySelector('img').src = 'img/close-modal.svg'
-        
-        newHeightSidebar = leftSidebar.offsetHeight - 64 - 85;
-        chatSidebars.forEach((chat) => {
-            chat.style.maxHeight = newHeightSidebar + 'px';
-        })
+        getHeightSidebar()
 
         check = 1
     } else {
@@ -97,16 +91,13 @@ let leftSidebar = document.querySelector(".window-chat__left-sidebar"),
     chatSidebars = document.querySelectorAll('.window-chat__items'),
     listChat = document.querySelectorAll('.window-chat__item--list')
 
-
 let newHeightSidebar = null;
 
+// Скрытие чатов при клике на мобиле
 window.addEventListener('DOMContentLoaded', () => {
-    newHeightSidebar = leftSidebar.offsetHeight - 64 - 85;
-    chatSidebars.forEach((chat) => {
-        chat.style.maxHeight = newHeightSidebar + 'px';
-    })
+    getHeightSidebar()
 
-    if(window.innerWidth <= 1240) {
+    if(window.innerWidth <= 766) {
         listChat.forEach(chat => {
             chat.addEventListener('click', () => {
                 leftChat.style.display = 'none'
@@ -118,11 +109,10 @@ window.addEventListener('DOMContentLoaded', () => {
 })
 
 window.addEventListener('resize',(e) => {
-    newHeightSidebar = leftSidebar.offsetHeight - 64 - 85;
-    chatSidebars.forEach((chat) => {
-        chat.style.maxHeight = newHeightSidebar + 'px';
-    })
+    getHeightSidebar()
 });
+
+
 
 
 

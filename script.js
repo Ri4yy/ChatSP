@@ -110,6 +110,16 @@ window.addEventListener('DOMContentLoaded', () => {
 
 window.addEventListener('resize',(e) => {
     getHeightSidebar()
+    
+    if(window.innerWidth > 1240) {
+        leftChat.classList.add('open')
+        btnOpenChat.querySelector('img').src = 'img/back.svg'
+        check = 1
+    } 
+    else {
+        leftChat.classList.remove('open')
+        check = 0
+    }
 });
 
 
